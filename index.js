@@ -50,10 +50,19 @@ document.getElementById('Apply-btn').addEventListener('click', function () {
         const Dis = ((TotalPrice * 20) / 100)
         Discount.innerText = Dis.toFixed(2);
         console.log(Dis);
+        const Total = document.getElementById('Total');
+        const afterdiscountTotal = TotalPrice - Dis
+        Total.innerText = afterdiscountTotal.toFixed(2);
     }
+
     console.log(TotalPrice);
 
     // console.log("kaj koer")
 
 
+})
+
+document.getElementById('Go-Home').addEventListener('click', function () {
+    const couponItem = document.getElementById('coupon-input');
+    couponItem.innerText = '';
 })
