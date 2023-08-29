@@ -59,4 +59,9 @@ document.getElementById('Go-Home').addEventListener('click', function () {
     Discount.innerText = '00.00';
     const Total = document.getElementById('Total');
     Total.innerText = '00.00';
+    const MakeBtn = document.getElementById('Make-btn');
+    MakeBtn.disabled = true;
+    const ApplyBtn = document.getElementById('Apply-btn');
+    ApplyBtn.disabled = true;
+
 })
