@@ -20,19 +20,11 @@ function handlclick(data) {
     if (TotalPrice >= 0) {
         document.getElementById('Make-btn').removeAttribute("disabled")
     }
-
     if (TotalPrice >= 200) {
         document.getElementById('Apply-btn').removeAttribute("disabled");
     }
-
     const Total = document.getElementById('Total');
     Total.innerText = TotalPrice.toFixed(2);
-    // const couponItem = document.getElementById('coupon-input');
-    // const coupon = couponItem.value;
-    // if (coupon == 'SELL200') {
-    //     document.getElementById('Apply-btn').removeAttribute('disabled')
-    // }
-    // coupon = '';
 }
 
 document.getElementById('Apply-btn').addEventListener('click', function () {
@@ -54,15 +46,17 @@ document.getElementById('Apply-btn').addEventListener('click', function () {
         const afterdiscountTotal = TotalPrice - Dis
         Total.innerText = afterdiscountTotal.toFixed(2);
     }
-
-    console.log(TotalPrice);
-
-    // console.log("kaj koer")
-
-
 })
 
 document.getElementById('Go-Home').addEventListener('click', function () {
     const couponItem = document.getElementById('coupon-input');
-    couponItem.innerText = '';
+    couponItem.value = '';
+    const List = document.getElementById('orderd-list');
+    List.innerText = '';
+    const TotalPrice = document.getElementById('Total-price');
+    TotalPrice.innerText = '00.00';
+    const Discount = document.getElementById('discount');
+    Discount.innerText = '00.00';
+    const Total = document.getElementById('Total');
+    Total.innerText = '00.00';
 })
